@@ -1,0 +1,163 @@
+.op0 {
+  opacity: 0;
+}
+
+.global-notice {
+  position: fixed;
+  z-index: 9999;
+  color: white;
+  background: black;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10rem 18rem;
+  border-radius: 3rem;
+  font-size: 12rem;
+  white-space: nowrap;
+}
+
+.row {
+  padding: 0 var(--page-padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 50rem;
+  font-size: 14rem;
+
+  &.no-active {
+    &:active {
+      background: var(--main-bg);
+    }
+  }
+
+  &.active {
+    &:active {
+      background: var(--active-main-bg);
+    }
+  }
+
+  &.no-padding {
+    padding: 0;
+  }
+
+  &.border {
+    border-bottom: 1px solid var(--line-color);
+  }
+
+  .left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+
+    img {
+      margin-right: 10rem;
+      width: 15rem;
+    }
+  }
+
+  .right {
+    max-width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--second-text-color);
+
+    img {
+      margin-left: 5rem;
+      width: 20rem;
+    }
+  }
+}
+
+.not-read {
+  @width: 7rem;
+  width: @width;
+  height: @width;
+  border-radius: 50%;
+  background: var(--primary-btn-color);
+}
+
+.badge {
+  font-size: 12rem;
+  display: block;
+  color: white;
+  padding: 1rem 6rem;
+  border-radius: 10rem;
+  background: var(--primary-btn-color);
+}
+
+.badge2 {
+  transform: scale(0.9);
+  font-size: 12rem;
+  color: black;
+  @width: 18rem;
+  width: @width;
+  height: @width;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: yellow;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.line {
+  height: 1rem;
+  background: var(--line-color2);
+  width: 100%;
+}
+
+.link {
+  color: rgb(18, 100, 149);
+}
+
+.slide {
+  touch-action: none;
+  height: 100%;
+  width: 100%;
+  transition: height 0.3s;
+  position: relative;
+  overflow: hidden;
+
+  .slide-infinite {
+    z-index: 1;
+    margin-top: 0;
+    transition: all 0.3s;
+  }
+
+  .slide-list {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: relative;
+  }
+}
+
+.base-page {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  overflow: auto;
+  color: white;
+  font-size: 14rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.second-text-color {
+  color: var(--second-text-color);
+}

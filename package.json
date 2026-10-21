@@ -1,0 +1,50 @@
+{
+  "name": "toktik",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Self-hosted Douyin-style video feed over your own NAS (Node backend + Vue front-end)",
+  "scripts": {
+    "dev": "vite --host",
+    "dev:server": "tsx watch server/index.ts",
+    "dev:all": "bash scripts/dev-all.sh",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "tsx server/index.ts",
+    "type-check": "vue-tsc --build --force",
+    "type-check:server": "tsc -p tsconfig.server.json",
+    "build-check": "pnpm run type-check && pnpm run type-check:server && pnpm run build",
+    "fixtures": "bash scripts/make-fixtures.sh",
+    "dev-webdav": "tsx scripts/dev-webdav.ts"
+  },
+  "dependencies": {
+    "@iconify/vue": "^5.0.4",
+    "@jambonn/vue-lazyload": "1.0.9",
+    "@marsaud/smb2": "^0.18.0",
+    "axios": "^1.15.0",
+    "basic-ftp": "^5.3.1",
+    "pinia": "^2.1.7",
+    "vue": "^3.5.13",
+    "vue-router": "4.3.0"
+  },
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.2",
+    "@types/node": "^20.11.28",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vitejs/plugin-vue-jsx": "^3.1.0",
+    "@vue/tsconfig": "^0.5.1",
+    "less": "4.1.3",
+    "prettier": "^3.2.5",
+    "tsx": "^4.19.2",
+    "typescript": "5.3.3",
+    "unplugin-vue-macros": "^2.9.1",
+    "vite": "^6.4.2",
+    "vue-tsc": "^2.0.6"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "vue-demi"
+    ]
+  }
+}
